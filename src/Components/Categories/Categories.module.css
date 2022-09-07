@@ -1,0 +1,80 @@
+@font-face {
+    font-family: 'Euclid CircularB 500';
+	src: local('Euclid CircularB 500'),
+		url('../../Assets/Fonts/euclidcircularb/EuclidCircularB-Medium.woff2') format('woff2'), 
+		url('../../Assets/Fonts/euclidcircularb/EuclidCircularB-Medium.woff')  format('woff'),
+		url('../../Assets/Fonts/euclidcircularb/EuclidCircularB-Medium.ttf')  format('ttf'),
+		url('../../Assets/Fonts/euclidcircularb/EuclidCircularB-Medium.eot')  format('eot');
+}
+
+.container {
+    width: 1160px;
+    margin: 0 auto;
+    margin-top: 42px;
+}
+
+
+.categories_container {
+    display: flex;
+    align-items: center; 
+    border-bottom: 1px solid rgba(61, 60, 60, 0.08);
+}
+
+.tabs {
+    display: flex;
+}
+
+.tab {
+    font-family: 'Euclid CircularB 500';
+    margin-right: 48px;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #3D3C3C;
+    cursor: pointer;
+}
+
+.active {
+    color: #BCA56A;
+    border-bottom: 2px solid #BCA56A;
+}
+
+.arrows {
+    margin-left: 539px;
+}
+
+.right{
+    margin-left: 48px;
+}
+
+.tabs_container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+@media (max-width: 360px){
+    .container {
+        width: 328px;
+        margin: 0 auto;
+        margin-top: 34px;
+    }
+
+    .categories_container  {
+        width: 328px;
+        overflow: scroll;
+    }
+
+    .tabs_container {
+        display: block;
+    }
+
+    .tab:last-child {
+        width: 167px;
+        margin: 0;
+    }
+
+    .arrows {
+        display: none;
+    }
+}

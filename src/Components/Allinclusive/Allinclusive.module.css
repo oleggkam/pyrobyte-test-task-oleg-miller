@@ -1,0 +1,167 @@
+
+
+@font-face {
+    font-family: 'Euclid CircularB 500';
+	src: local('Euclid CircularB 500'),
+		url('../../Assets/Fonts/euclidcircularb/EuclidCircularB-Medium.woff2') format('woff2'), 
+		url('../../Assets/Fonts/euclidcircularb/EuclidCircularB-Medium.woff')  format('woff'),
+		url('../../Assets/Fonts/euclidcircularb/EuclidCircularB-Medium.ttf')  format('ttf'),
+		url('../../Assets/Fonts/euclidcircularb/EuclidCircularB-Medium.eot')  format('eot');
+}
+
+@font-face {
+    font-family: 'Euclid Circular B 300';
+	src: local('Euclid Circular B 300'),
+		url('../../Assets/Fonts/euclidcircularb/EuclidCircularB-Light.woff2') format('woff2'), 
+		url('../../Assets/Fonts/euclidcircularb/EuclidCircularB-Light.woff')  format('woff'),
+		url('../../Assets/Fonts/euclidcircularb/EuclidCircularB-Light.ttf')  format('ttf'),
+		url('../../Assets/Fonts/euclidcircularb/EuclidCircularB-Light.eot')  format('eot');
+}
+
+.container {
+    position: relative;
+    width: 1392px;
+    margin: 0 auto;
+    background-color: #F6F6F6;
+    border-radius: 24px;
+    margin-top: 96px;
+    padding: 77px 0px 60px 116px;
+}
+.wrapper {
+    position: relative;
+    display: flex;
+}
+
+.first {
+    margin-top: 105px;
+    width: 560px;
+}
+
+.second {
+    width: 260px;
+    margin-left: 40px;
+    margin-top: 95px;
+}
+
+.runner_360, .pool_360, .food_360 {
+    display: none;
+}
+
+.title {
+    font-family: 'Euclid CircularB 500';
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #999999;
+}
+
+.info {
+    font-family: 'Euclid Circular B 300';
+    margin-top: 24px;
+    margin-bottom: 49px;
+    font-size: 24px;
+    line-height: 32px;
+    color: #3D3C3C;
+}
+
+.third {
+    padding: 8px;
+    width: 276px;
+    height: 504px;
+    background: #FFFFFF;
+    box-shadow: 0px 8px 16px rgba(142, 124, 78, 0.16);
+    border-radius: 8px;
+    margin-left: 32px;
+}
+
+.first_img, .second_img {
+    margin-bottom: 22px;
+}
+
+.third_img {
+    margin-bottom: 14px;
+}
+
+.description {
+    font-family: 'Euclid Circular B 300';
+    margin-left: 15px;
+    margin-bottom: 10px;
+    font-size: 16px;
+    line-height: 24px;
+    color: #666666;
+}
+
+.bottom_logo {
+    position: absolute;
+    top: 3633px;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.vector_right {
+    position: absolute;
+    right: 0;
+    bottom:0;
+}
+
+.vector_left {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+@media (max-width: 360px){
+    .container {
+        width: 100%;
+        margin-top: 120px;
+        padding: 0;
+    }
+    .title, .info {
+        display: none;
+    }
+    .wrapper {
+        display: block;
+        width: 328px;
+        margin: 0 auto;
+        padding-top: 32px;
+    }
+
+    .first, .second, .third {
+        margin: 0;
+        width: 328px;
+    }
+
+    .third {
+        height: 369px;
+        background: transparent;
+        box-shadow: none;
+    }
+    .first_img, .second_img, .third_img {
+        display: none;
+    }
+    
+    .runner_360, .pool_360, .food_360 {
+        display: block;
+    }
+    .description {
+        margin-top: 22px;
+    }
+
+    .switch {
+        position: relative;
+        width: 328px;
+        margin: 0 auto;
+        padding-top: 24px;
+
+    }
+    .allinclusive {
+        font-size: 24px;
+        line-height: 56px;
+        color: #3D3C3C;
+    }
+    .arrows {
+        margin: 0;
+        margin-left: 56px;
+    }  
+}

@@ -1,0 +1,334 @@
+@font-face {
+    font-family: 'Euclid CircularB 500';
+	src: local('Euclid CircularB 500'),
+		url('../../Assets/Fonts/euclidcircularb/EuclidCircularB-Medium.woff2') format('woff2'), 
+		url('../../Assets/Fonts/euclidcircularb/EuclidCircularB-Medium.woff')  format('woff'),
+		url('../../Assets/Fonts/euclidcircularb/EuclidCircularB-Medium.ttf')  format('ttf'),
+		url('../../Assets/Fonts/euclidcircularb/EuclidCircularB-Medium.eot')  format('eot');
+}
+
+@font-face {
+    font-family: 'Euclid Circular B 300';
+	src: local('Euclid Circular B 300'),
+		url('../../Assets/Fonts/euclidcircularb/EuclidCircularB-Light.woff2') format('woff2'), 
+		url('../../Assets/Fonts/euclidcircularb/EuclidCircularB-Light.woff')  format('woff'),
+		url('../../Assets/Fonts/euclidcircularb/EuclidCircularB-Light.ttf')  format('ttf'),
+		url('../../Assets/Fonts/euclidcircularb/EuclidCircularB-Light.eot')  format('eot');
+}
+
+@font-face {
+    font-family: 'Euclid Circular B 400';
+	src: local('Euclid Circular B 400'),
+		url('../../Assets/Fonts/euclidcircularb/EuclidCircularB-Regular.woff2') format('woff2'), 
+		url('../../Assets/Fonts/euclidcircularb/EuclidCircularB-Regular.woff')  format('woff'),
+		url('../../Assets/Fonts/euclidcircularb/EuclidCircularB-Regular.ttf')  format('ttf'),
+		url('../../Assets/Fonts/euclidcircularb/EuclidCircularB-Regular.eot')  format('eot');
+}
+
+
+@font-face {
+    font-family: 'SangBleu Kingdom 400';
+	src: local('SangBleu Kingdom 400'),
+		url('../../Assets/Fonts/SangBleuKingdom/SangBleuKingdom-Regular-WebXL.woff')  format('woff'),
+        url('../../Assets/Fonts/SangBleuKingdom/SangBleuKingdom-Regular-WebXL.ttf')  format('ttf');
+}
+
+.main {
+    background-color: transparent;
+}
+
+.flower, .line, .flower_petral, .clouds , .hotel, .mriya, .tablet   {
+    position: absolute;
+    z-index: -1;
+}
+
+.flower {   
+    right: 0;
+    top: 0;
+}
+
+.clouds {
+    left: 0;
+    top: 1272px;
+}
+
+.hotel {
+    right: 0;
+    top: 1632px;
+}
+
+.tablet {
+    left: 412px;
+    top: 2850px;
+    z-index: 2;
+}
+
+.mriya {
+    left: -35px;
+    top: 3134px;
+    z-index: -2;
+}
+
+.bottom_logo {
+    position: absolute;
+    top: 3633px;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.line {
+    left: 718.99px;
+    top: 611.7px;
+
+}
+
+.flower_petral {
+    left: 806.7px;
+    top: 611.73px;
+}
+
+.waves {
+    margin-left: 49px;
+    margin-top: 24px;
+}
+
+.flower_360, .flower_stroke_360, .hotel_360, .clouds_360 {
+    display: none;
+}
+
+.info_container {
+    margin-left: 135px;
+    margin-top: 23px;
+    display: flex;
+}
+
+
+.main_info {
+    width: 917px;
+}
+
+.weather {
+    width: 185px;
+}
+
+.socials {
+    height: 100%;
+    margin-top: 113px;
+}
+
+.social {
+    position: relative;
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    border: 1px solid #D9C287;
+    margin-left: 61px;
+}
+
+.social:not(:first-child) {
+    margin-top: 32px;
+}
+
+.social_button {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background-color: #FFFFFF;
+}
+
+.social_button svg {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+.title {
+    font-family: 'Euclid CircularB 500';
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #3D3C3C;
+}
+
+.name_container {
+    margin-top: 47px;
+}
+
+.name {
+    font-family: 'SangBleu Kingdom 400';
+    color: #3D3C3C;
+    font-size: 96px;
+    line-height: 96px;
+}
+
+.description {
+    margin-top: 41px;
+    font-family: 'Euclid Circular B 300';
+    font-size: 24px;
+    line-height: 32px;
+    color: #3D3C3C;
+}
+
+.degree {
+    font-family: 'Euclid Circular B 400';
+    font-size: 48px;
+    line-height: 56px;
+    color: #FFFFFF;
+}
+
+
+.buttons_container {
+    margin-top: 57px;
+}
+
+.find_room, .explore {
+    width: 200px;
+    height: 64px;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 14px;
+    line-height: 24px;
+    font-family: 'Euclid CircularB 500';
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #3D3C3C;
+
+}
+
+.find_room {
+    background: linear-gradient(0deg, #BCA56A, #BCA56A), #86C1DB;  
+    color: #FFFFFF;
+}
+.explore {
+    border: 1px solid #D9C287;
+    color: #3D3C3C;
+    margin-left: 40px;
+}
+
+.vector {
+    margin-left: 31px;
+    margin-top: 24px;
+    border-left: 1px solid #D9C287;
+    height: 48px;
+}
+
+.round {
+    position: relative;
+    margin-top: 24px;
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    border: 1px solid #D9C287;;
+}
+
+.round svg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.weather_container {
+    margin-top: 547px;
+
+}
+
+.weather_state {
+    font-family: 'Euclid Circular B 300';
+    font-size: 20px;
+    line-height: 32px;
+    color: #FFFFFF;
+    margin-left: 83px;
+}
+
+.location {
+    font-family: 'Euclid Circular B 300';
+    font-size: 16px;
+    line-height: 24px;
+    color: #FFFFFF;
+    margin-left: 50px;
+    display: flex;
+    align-items: center;
+}
+
+.town {
+    margin-left: 24px;
+}
+
+.number {
+    margin-left: 24px;
+}
+
+@media (max-width: 360px){
+    .info_container {
+        width: 328px;
+        margin: 0 auto;
+        display: block;
+        margin-top: 23px;
+    }
+
+    .main_info {
+        width: 100%;
+    }
+
+    .flower, .flower_petral, .vector, .tablet, .mriya, .line, .weather, .socials, .br , .hotel, .clouds  {
+        display: none;
+    }
+    .flower_360, .flower_stroke_360,.hotel_360, .clouds_360  {
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 0;
+        z-index: -1;
+    }
+    .waves {
+        margin-left: -20.83%;;
+    }
+    .name_container {
+        margin-top: 30px;
+    }
+    .name {
+        font-size: 64px;
+        line-height: 72px;
+    } 
+    .description {
+        margin-top: 28px;
+        font-size: 20px;
+        line-height: 32px;
+    }
+    .find_room, .explore {
+        width: 156px;
+        margin: 0;
+    }
+
+    .explore {
+        margin-left: 16px;
+    } 
+
+    .buttons_container {
+        margin-top: 39px;
+    }  
+
+    .round {
+        margin: 0 auto;
+        margin-top: 48px;
+    }
+
+    .clouds_360 {
+        top: 3459px;
+    }
+
+    .hotel_360 {
+        top: 2148px;
+    }
+    .bottom_logo  {
+        top: 3744px;
+    } 
+}

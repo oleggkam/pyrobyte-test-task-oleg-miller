@@ -1,0 +1,90 @@
+@font-face {
+    font-family: 'SangBleu Kingdom 700';
+	src: local('SangBleu Kingdom 700'),
+		url('../../../Assets/Fonts/SangBleuKingdom/SangBleuKingdom-Bold-WebXL.woff')  format('woff'),
+        url('../../../Assets/Fonts/SangBleuKingdom/SangBleuKingdom-Bold-WebXL.ttf')  format('ttf');
+}
+
+.container {
+    position: relative;
+    width: 1168px;
+    height: 700px;
+}
+
+.window {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+.slides {
+    height: 100%;
+    display: flex;
+    transition: translate;
+    transition-property: transform;
+    transition-duration: 500ms;
+    transition-timing-function: ease-in-out;
+}
+
+.switch {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    z-index: 3;
+}
+.arrows {
+    margin-top: 14px;
+    margin-left: 16px;
+}
+
+.allinclusive {
+    font-family: 'SangBleu Kingdom 700';
+    font-size: 64px;
+    line-height: 56px;
+    color: #3D3C3C;
+}
+
+
+.previous, .next {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #D9C287;  
+    margin-left: 16px; 
+    cursor: pointer;
+}
+
+.previous svg, .next  svg {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+
+@media (max-width: 360px) {
+
+    .container {
+        position: relative;
+        width: 328px;
+        height: 1000px;
+        margin: 0 auto;
+    }
+
+    .switch {
+        position: relative;
+        width: 328px;
+        margin: 0 auto;
+        padding-top: 24px;
+
+    }
+    .allinclusive {
+        font-size: 24px;
+        line-height: 56px;
+        color: #3D3C3C;
+    }
+    .arrows {
+        margin: 0;
+        margin-left: 40px;
+    }  
+}

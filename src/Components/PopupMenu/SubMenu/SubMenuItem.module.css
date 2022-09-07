@@ -1,0 +1,45 @@
+@font-face {
+    font-family: 'Euclid Circular B 300';
+	src: local('Euclid Circular B 300'),
+		url('../../../Assets/Fonts/euclidcircularb/EuclidCircularB-Light.woff2') format('woff2'), 
+		url('../../../Assets/Fonts/euclidcircularb/EuclidCircularB-Light.woff')  format('woff'),
+		url('../../../Assets/Fonts/euclidcircularb/EuclidCircularB-Light.ttf')  format('ttf'),
+		url('../../../Assets/Fonts/euclidcircularb/EuclidCircularB-Light.eot')  format('eot');
+}
+
+
+.container {
+    height: 577px;
+    width: 413px;
+    padding-left: 39px;
+    position: relative;
+}
+
+.title {
+    font-family: 'Euclid Circular B 300';
+    font-size: 24px;
+    line-height: 32px;
+    color: #FFFFFF;
+    text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.32);
+    margin-top: 10px;
+}
+
+.title:hover {
+    cursor: pointer;
+    color: #D9C287;
+}
+
+.description{
+    position: absolute;
+    bottom: 34px;
+    font-family: 'Euclid Circular B 300';
+    font-size: 16px;
+    line-height: 24px;
+    color: rgba(255, 255, 255, 0.48);
+}
+
+@media (max-width: 360px){
+  .container {
+    display: none;
+  }  
+}
