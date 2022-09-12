@@ -145,8 +145,8 @@ const PopupMenu = ({ popupMenuToogle }) => {
                   width="43.5"
                   height="0.5"
                   stroke="white"
-                  stroke-width="0.5"
-                  stroke-dasharray="3 4"
+                  strokeWidth="0.5"
+                  strokeDasharray="3 4"
                 />
               </svg>
             </div>

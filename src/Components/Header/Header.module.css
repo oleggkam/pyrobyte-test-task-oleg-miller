@@ -159,6 +159,10 @@
     .stars, .lang, .header_left_menu, .telephon {
         display: none;
     }
+
+    .login_container {
+        display: none;
+    }
     .key_360 {
         display: block;
         
