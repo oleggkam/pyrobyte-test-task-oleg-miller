@@ -6,17 +6,23 @@ import AllInclusiveSlider from './AllInclusiveSlider/AllInclusiveSlider';
 const Allinclusive = () => {
   const containerRef = React.useRef(null);
   const [currentWidth, setCurrentWidth] = React.useState(0);
-  const observer = React.useRef(
+  let observer = React.useRef(
     new ResizeObserver((entries) => {
       const { width } = entries[0].contentRect;
       setCurrentWidth(width);
     }),
   );
   React.useEffect(() => {
-    observer.current.observe(containerRef.current);
+    if (containerRef.current) {
+      observer.current.observe(containerRef.current);
+    }
+    return () => {
+      observer.current.unobserve(containerRef.current);
+    };
   }, [containerRef, observer]);
+
   return (
-    <div ref={containerRef} className={styles.container}>
+    <section ref={containerRef} className={styles.container}>
       <AllInclusiveSlider currentWidth={currentWidth}>
         <div className={styles.wrapper}>
           <div className={styles.first}>
@@ -31,12 +37,14 @@ const Allinclusive = () => {
               alt="runner_360"
             />
             <div className={styles.description}>
-              Заниматесь в тренажерном зале и посещайте групповые <br /> тренировки
-              <ReadMore />
+              <div className={styles.description_container}>
+                Заниматесь в тренажерном зале и посещайте групповые тренировки
+                <ReadMore />
+              </div>
             </div>
           </div>
           <div className={styles.second}>
-            <div className={styles.title}>Оздоровление</div>
+            <h3 className={styles.title}>Оздоровление</h3>
             <div className={styles.info}>
               Mriya Resort — это маленький город со множеством возможностей, каждый найдет себе
               занятие по вкусу
@@ -52,9 +60,10 @@ const Allinclusive = () => {
               alt="food_360"
             />
             <div className={styles.description}>
-              Питаться в ресторане <br /> шведской линии согласно
-              <br /> выбранному варианту
-              <ReadMore />
+              <div className={styles.description_container}>
+                Питаться в ресторане шведской линии согласно выбранному варианту
+                <ReadMore />
+              </div>
             </div>
           </div>
           <div className={styles.third}>
@@ -69,8 +78,10 @@ const Allinclusive = () => {
               alt="pool_360"
             />
             <div className={styles.description}>
-              Исследовать все <br /> общедоступные зоны и <br /> территории комплекса
-              <ReadMore />
+              <div className={styles.description_container}>
+                Исследовать все общедоступные зоны и территории комплекса
+                <ReadMore />
+              </div>
             </div>
           </div>
         </div>
@@ -87,12 +98,14 @@ const Allinclusive = () => {
               alt="runner_360"
             />
             <div className={styles.description}>
-              Заниматесь в тренажерном зале и посещайте групповые <br /> тренировки
-              <ReadMore />
+              <div className={styles.description_container}>
+                Заниматесь в тренажерном зале и посещайте групповые тренировки
+                <ReadMore />
+              </div>
             </div>
           </div>
           <div className={styles.second}>
-            <div className={styles.title}>Оздоровление</div>
+            <h3 className={styles.title}>Оздоровление</h3>
             <div className={styles.info}>
               Mriya Resort — это маленький город со множеством возможностей, каждый найдет себе
               занятие по вкусу
@@ -108,9 +121,10 @@ const Allinclusive = () => {
               alt="food_360"
             />
             <div className={styles.description}>
-              Питаться в ресторане <br /> шведской линии согласно
-              <br /> выбранному варианту
-              <ReadMore />
+              <div className={styles.description_container}>
+                Питаться в ресторане шведской линии согласно выбранному варианту
+                <ReadMore />
+              </div>
             </div>
           </div>
           <div className={styles.third}>
@@ -125,8 +139,10 @@ const Allinclusive = () => {
               alt="pool_360"
             />
             <div className={styles.description}>
-              Исследовать все <br /> общедоступные зоны и <br /> территории комплекса
-              <ReadMore />
+              <div className={styles.description_container}>
+                Исследовать все общедоступные зоны и территории комплекса
+                <ReadMore />
+              </div>
             </div>
           </div>
         </div>
@@ -143,12 +159,14 @@ const Allinclusive = () => {
               alt="runner_360"
             />
             <div className={styles.description}>
-              Заниматесь в тренажерном зале и посещайте групповые <br /> тренировки
-              <ReadMore />
+              <div className={styles.description_container}>
+                Заниматесь в тренажерном зале и посещайте групповые тренировки
+                <ReadMore />
+              </div>
             </div>
           </div>
           <div className={styles.second}>
-            <div className={styles.title}>Оздоровление</div>
+            <h3 className={styles.title}>Оздоровление</h3>
             <div className={styles.info}>
               Mriya Resort — это маленький город со множеством возможностей, каждый найдет себе
               занятие по вкусу
@@ -164,9 +182,10 @@ const Allinclusive = () => {
               alt="food_360"
             />
             <div className={styles.description}>
-              Питаться в ресторане <br /> шведской линии согласно
-              <br /> выбранному варианту
-              <ReadMore />
+              <div className={styles.description_container}>
+                Питаться в ресторане шведской линии согласно выбранному варианту
+                <ReadMore />
+              </div>
             </div>
           </div>
           <div className={styles.third}>
@@ -181,13 +200,15 @@ const Allinclusive = () => {
               alt="pool_360"
             />
             <div className={styles.description}>
-              Исследовать все <br /> общедоступные зоны и <br /> территории комплекса
-              <ReadMore />
+              <div className={styles.description_container}>
+                Исследовать все общедоступные зоны и территории комплекса
+                <ReadMore />
+              </div>
             </div>
           </div>
         </div>
       </AllInclusiveSlider>
-    </div>
+    </section>
   );
 };
 

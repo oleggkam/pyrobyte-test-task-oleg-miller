@@ -3,8 +3,8 @@ import styles from './Choose.module.css';
 
 const Choose = () => {
   return (
-    <div className={styles.container}>
-      <div className={styles.text}>Выберите свой отдых</div>
+    <section className={styles.container}>
+      <h2 className={styles.text}>Выберите свой отдых</h2>
       <div className={styles.form}>
         <div className={styles.types}>
           <span>Семейный отдых</span>
@@ -74,7 +74,7 @@ const Choose = () => {
           </svg>
         </div>
         <div className={styles.guests}>
-          <span>2 взрослых • без детей • 1 номер</span>
+          <span>2 взрослых &nbsp;•&nbsp; без детей &nbsp;•&nbsp; 1 номер</span>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="20"
@@ -97,7 +97,7 @@ const Choose = () => {
         </div>
         <button className={styles.find}>Найти</button>
       </div>
-    </div>
+    </section>
   );
 };
 

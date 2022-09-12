@@ -1,31 +1,11 @@
-
-
-@font-face {
-    font-family: 'Euclid CircularB 500';
-	src: local('Euclid CircularB 500'),
-		url('../../Assets/Fonts/euclidcircularb/EuclidCircularB-Medium.woff2') format('woff2'), 
-		url('../../Assets/Fonts/euclidcircularb/EuclidCircularB-Medium.woff')  format('woff'),
-		url('../../Assets/Fonts/euclidcircularb/EuclidCircularB-Medium.ttf')  format('ttf'),
-		url('../../Assets/Fonts/euclidcircularb/EuclidCircularB-Medium.eot')  format('eot');
-}
-
-@font-face {
-    font-family: 'Euclid Circular B 300';
-	src: local('Euclid Circular B 300'),
-		url('../../Assets/Fonts/euclidcircularb/EuclidCircularB-Light.woff2') format('woff2'), 
-		url('../../Assets/Fonts/euclidcircularb/EuclidCircularB-Light.woff')  format('woff'),
-		url('../../Assets/Fonts/euclidcircularb/EuclidCircularB-Light.ttf')  format('ttf'),
-		url('../../Assets/Fonts/euclidcircularb/EuclidCircularB-Light.eot')  format('eot');
-}
-
 .container {
     position: relative;
     width: 1392px;
     margin: 0 auto;
-    background-color: #F6F6F6;
+    background-color: var(--color_white_2);
     border-radius: 24px;
     margin-top: 96px;
-    padding: 77px 0px 60px 116px;
+    padding: 77px 0px 79px 116px;
 }
 .wrapper {
     position: relative;
@@ -40,7 +20,7 @@
 .second {
     width: 260px;
     margin-left: 40px;
-    margin-top: 95px;
+    margin-top: 106px;
 }
 
 .runner_360, .pool_360, .food_360 {
@@ -59,37 +39,47 @@
 .info {
     font-family: 'Euclid Circular B 300';
     margin-top: 24px;
-    margin-bottom: 49px;
+    margin-bottom: 57px;
     font-size: 24px;
     line-height: 32px;
-    color: #3D3C3C;
+    color: var(--color_dark_1);
 }
 
 .third {
     padding: 8px;
     width: 276px;
     height: 504px;
-    background: #FFFFFF;
+    background: var(--color_white_1);
     box-shadow: 0px 8px 16px rgba(142, 124, 78, 0.16);
     border-radius: 8px;
     margin-left: 32px;
+    margin-top: 3px;
 }
-
-.first_img, .second_img {
-    margin-bottom: 22px;
+.first_img {
+    margin-top: 10px;
+}
+.second_img {
+    margin-bottom: 18px;
 }
 
 .third_img {
-    margin-bottom: 14px;
+    margin-bottom: 10px;
 }
 
 .description {
     font-family: 'Euclid Circular B 300';
-    margin-left: 15px;
+    margin-left: 16px;
     margin-bottom: 10px;
     font-size: 16px;
     line-height: 24px;
     color: #666666;
+}
+.second .description{
+    margin-left: 16px;
+}
+
+.first .description{
+    margin-top: 18px;
 }
 
 .bottom_logo {
@@ -124,7 +114,7 @@
         display: block;
         width: 328px;
         margin: 0 auto;
-        padding-top: 32px;
+        padding-top: 23px;
     }
 
     .first, .second, .third {
@@ -133,6 +123,7 @@
     }
 
     .third {
+        padding: 0;
         height: 369px;
         background: transparent;
         box-shadow: none;
@@ -148,6 +139,14 @@
         margin-top: 22px;
     }
 
+    .first .description{
+        margin-top: 22px;
+    }
+
+    .second, .third {
+        margin-top: 39px;
+    }
+
     .switch {
         position: relative;
         width: 328px;
@@ -158,10 +157,13 @@
     .allinclusive {
         font-size: 24px;
         line-height: 56px;
-        color: #3D3C3C;
+        color: var(--color_dark_1);
     }
     .arrows {
         margin: 0;
         margin-left: 56px;
     }  
+    .description_container {
+        width: 296px;
+    }
 }

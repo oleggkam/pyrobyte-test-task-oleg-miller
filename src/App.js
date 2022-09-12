@@ -9,11 +9,13 @@ const App = () => {
   return (
     <div className={styles.container}>
       <Header />
-      <Main />
-      <Choose />
-      <Categories />
-      <Info />
-      <Allinclusive />
+      <main>
+        <Main />
+        <Choose />
+        <Categories />
+        <Info />
+        <Allinclusive />
+      </main>
     </div>
   );
 };

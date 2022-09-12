@@ -13,10 +13,8 @@ const PopupMenuSlider = ({ children }) => {
     } else {
       slideNumber = (currentSlideNumber + direction) % SLIDES_NUMBER;
     }
-
     setCurrentSlideNumber(slideNumber);
   };
-  console.log(currentSlideNumber);
   React.useEffect(() => {
     const interval = setInterval(() => {
       changeSlide(1);

@@ -84,7 +84,7 @@ const PopupMenu = ({ popupMenuToogle }) => {
   }, [isMobileMode]);
 
   return (
-    <div className={styles.wrapper}>
+    <section className={styles.wrapper}>
       <div className={styles.container}>
         <div className={styles.header}>
           <button className={styles.ru}>ru</button>
@@ -104,15 +104,17 @@ const PopupMenu = ({ popupMenuToogle }) => {
               fill="#D9C287"
             />
           </svg>
-          <div className={styles.horizontal}>
-            {horizontalMenuItems.map((item, index) => {
-              return (
-                <div key={index} className={styles.horizontal_item}>
-                  {item}
-                </div>
-              );
-            })}
-          </div>
+          <nav className={styles.horizontal}>
+            <ul>
+              {horizontalMenuItems.map((item, index) => {
+                return (
+                  <li key={index} className={styles.horizontal_item}>
+                    {item}
+                  </li>
+                );
+              })}
+            </ul>
+          </nav>
           <div className={styles.right}>
             <div className={styles.key}>
               <svg
@@ -173,46 +175,49 @@ const PopupMenu = ({ popupMenuToogle }) => {
             <div className={styles.vertical_container} ref={wrapperRef}>
               <div className={styles.menu_container}>
                 <div className={styles.vertical_window}>
-                  {verticalMenuItems.map((item, index) => {
-                    return (
-                      <div key={index}>
-                        <div
-                          className={styles.vertical_item}
-                          onMouseEnter={() => {
-                            setActiveSubMenu(item.SubMenuItemId);
-                          }}>
-                          <div className={styles.text}>{item.name}</div>
-                          {activeSubMenu === index && isMobileMode && (
-                            <svg
-                              className={styles.arrow}
-                              xmlns="http://www.w3.org/2000/svg"
-                              width="12"
-                              height="8"
-                              viewBox="0 0 12 8"
-                              fill="none">
-                              <path
-                                d="M5.3625 7.72816L0.2625 2.4466C0.0875 2.26537 0 2.04531 0 1.78641C0 1.52751 0.0875 1.30744 0.2625 1.12621L1.125 0.271845C1.3 0.0906149 1.5125 0 1.7625 0C2.0125 0 2.225 0.0906149 2.4 0.271845L6 4L9.6 0.271845C9.775 0.0906149 9.9875 0 10.2375 0C10.4875 0 10.7 0.0906149 10.875 0.271845L11.7375 1.12621C11.9125 1.30744 12 1.52751 12 1.78641C12 2.04531 11.9125 2.26537 11.7375 2.4466L6.6375 7.72816C6.4625 7.90939 6.25 8 6 8C5.75 8 5.5375 7.90939 5.3625 7.72816Z"
-                                fill="white"
-                                fillOpacity="0.24"
+                  <ul>
+                    {' '}
+                    {verticalMenuItems.map((item, index) => {
+                      return (
+                        <li key={index}>
+                          <div
+                            className={styles.vertical_item}
+                            onMouseEnter={() => {
+                              setActiveSubMenu(item.SubMenuItemId);
+                            }}>
+                            <span className={styles.text}>{item.name}</span>
+                            {activeSubMenu === index && isMobileMode && (
+                              <svg
+                                className={styles.arrow}
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="12"
+                                height="8"
+                                viewBox="0 0 12 8"
+                                fill="none">
+                                <path
+                                  d="M5.3625 7.72816L0.2625 2.4466C0.0875 2.26537 0 2.04531 0 1.78641C0 1.52751 0.0875 1.30744 0.2625 1.12621L1.125 0.271845C1.3 0.0906149 1.5125 0 1.7625 0C2.0125 0 2.225 0.0906149 2.4 0.271845L6 4L9.6 0.271845C9.775 0.0906149 9.9875 0 10.2375 0C10.4875 0 10.7 0.0906149 10.875 0.271845L11.7375 1.12621C11.9125 1.30744 12 1.52751 12 1.78641C12 2.04531 11.9125 2.26537 11.7375 2.4466L6.6375 7.72816C6.4625 7.90939 6.25 8 6 8C5.75 8 5.5375 7.90939 5.3625 7.72816Z"
+                                  fill="white"
+                                  fillOpacity="0.24"
+                                />
+                              </svg>
+                            )}
+                          </div>
+                          {isMobileMode && (
+                            <>
+                              <div className={styles.mobile_border}></div>
+                              <SubMenuMobile
+                                isOpen={activeSubMenu === index ? true : false}
+                                menuData={
+                                  verticalMenuItems[activeSubMenu === null ? 0 : activeSubMenu]
+                                    .mobileSubMenuItems
+                                }
                               />
-                            </svg>
+                            </>
                           )}
-                        </div>
-                        {isMobileMode && (
-                          <>
-                            <div className={styles.mobile_border}></div>
-                            <SubMenuMobile
-                              isOpen={activeSubMenu === index ? true : false}
-                              menuData={
-                                verticalMenuItems[activeSubMenu === null ? 0 : activeSubMenu]
-                                  .mobileSubMenuItems
-                              }
-                            />
-                          </>
-                        )}
-                      </div>
-                    );
-                  })}
+                        </li>
+                      );
+                    })}
+                  </ul>
                 </div>
                 <div className={styles.vector}>
                   <svg
@@ -381,7 +386,7 @@ const PopupMenu = ({ popupMenuToogle }) => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

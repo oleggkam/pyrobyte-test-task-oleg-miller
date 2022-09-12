@@ -1,8 +1,82 @@
+:root {
+	--color_dark_1 : #3D3C3C;
+	--color_dark_2: #242424;
+	--color_dark_3: #333333;
+	--color_white_1: #FFFFFF;
+	--color_white_2: #F6F6F6;
+	--color_gold_1: #D9C287;
+	--color_gold_2: #BCA56A;
+	--color_text_shadow: rgba(0, 0, 0, 0.32);
+	--color_dark_border:rgba(61, 60, 60, 0.08);
+
+}
+
+@font-face {
+    font-family: 'Euclid CircularB 500';
+	src: local('Euclid CircularB 500'),
+		url('./Assets/Fonts/euclidcircularb/EuclidCircularB-Medium.woff2') format('woff2'), 
+		url('./Assets/Fonts/euclidcircularb/EuclidCircularB-Medium.woff')  format('woff'),
+		url('./Assets/Fonts/euclidcircularb/EuclidCircularB-Medium.ttf')  format('ttf'),
+		url('./Assets/Fonts/euclidcircularb/EuclidCircularB-Medium.eot')  format('eot');
+}
+
+@font-face {
+    font-family: 'Euclid Circular B 400';
+	src: local('Euclid Circular B 400'),
+		url('./Assets/Fonts/euclidcircularb/EuclidCircularB-Regular.woff2') format('woff2'), 
+		url('./Assets/Fonts/euclidcircularb/EuclidCircularB-Regular.woff')  format('woff'),
+		url('./Assets/Fonts/euclidcircularb/EuclidCircularB-Regular.ttf')  format('ttf'),
+		url('./Assets/Fonts/euclidcircularb/EuclidCircularB-Regular.eot')  format('eot');
+}
+
+@font-face {
+    font-family: 'Euclid Circular B 300';
+	src: local('Euclid Circular B 300'),
+		url('./Assets/Fonts/euclidcircularb/EuclidCircularB-Light.woff2') format('woff2'), 
+		url('./Assets/Fonts/euclidcircularb/EuclidCircularB-Light.woff')  format('woff'),
+		url('./Assets/Fonts/euclidcircularb/EuclidCircularB-Light.ttf')  format('ttf'),
+		url('./Assets/Fonts/euclidcircularb/EuclidCircularB-Light.eot')  format('eot');
+}
+
+@font-face {
+    font-family: 'SangBleu Kingdom 700';
+	src: local('SangBleu Kingdom 700'),
+		url('./Assets/Fonts/SangBleuKingdom/SangBleuKingdom-Bold-WebXL.woff')  format('woff'),
+        url('./Assets/Fonts/SangBleuKingdom/SangBleuKingdom-Bold-WebXL.ttf')  format('ttf');
+}
+
+
+@font-face {
+    font-family: 'SangBleu Kingdom 400';
+	src: local('SangBleu Kingdom 400'),
+		url('./Assets/Fonts/SangBleuKingdom/SangBleuKingdom-Regular-WebXL.woff')  format('woff'),
+        url('./Assets/Fonts/SangBleuKingdom/SangBleuKingdom-Regular-WebXL.ttf')  format('ttf');
+}
+
+
+@font-face {
+    font-family: 'Euclid Circular 600';
+	src: local('Euclid Circular 600'),
+		url('./Assets/Fonts/euclidcircularb/EuclidCircularB-SemiBold.woff2') format('woff2'), 
+		url('./Assets/Fonts/euclidcircularb/EuclidCircularB-SemiBold.woff')  format('woff'),
+		url('./Assets/Fonts/euclidcircularb/EuclidCircularB-SemiBold.ttf')  format('ttf'),
+		url('./Assets/Fonts/euclidcircularb/EuclidCircularB-SemiBold.eot')  format('eot');
+}
+
+@font-face {
+    font-family: 'Euclid Circular A 600';
+	src: local('Euclid Circular A 600'),
+		url('./Assets//Fonts/font/EuclidCircularA-SemiBold.woff2') format('woff2'), 
+		url('./Assets//Fonts/font/EuclidCircularA-SemiBold.woff')  format('woff'),
+		url('./Assets//Fonts/font/EuclidCircularA-SemiBold.ttf')  format('ttf'),
+		url('./Assets//Fonts/font/EuclidCircularA-SemiBold.eot')  format('eot');
+}
+
+
 .container {
     width: 1440px;
     margin: 0 auto;
     position: relative;
-    height: 3733px;
 }
 
 @media (max-width: 360px){
@@ -10,3 +84,4 @@
         width: 100%;
     }
 }
+

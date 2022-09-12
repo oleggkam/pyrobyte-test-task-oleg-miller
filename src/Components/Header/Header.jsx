@@ -11,7 +11,7 @@ const Header = () => {
   return (
     <>
       {popupMenuIsOpen && <PopupMenu popupMenuToogle={popupMenuToogle} />}
-      <div className={styles.header}>
+      <header className={styles.header}>
         <div className={styles.header_left}>
           <button
             className={styles.open}
@@ -29,13 +29,15 @@ const Header = () => {
               <path d="M0 24H24V26H0V24Z" fill="white" />
             </svg>
           </button>
-          <div className={styles.header_left_menu}>
-            {menuData.map((item, index) => (
-              <div className={`${styles.header_left_menu_item} ${styles.menu_text}`} key={index}>
-                {item}
-              </div>
-            ))}
-          </div>
+          <nav className={styles.header_left_menu}>
+            <ul className={styles.header_left_menu_ul}>
+              {menuData.map((item, index) => (
+                <li className={`${styles.header_left_menu_item} ${styles.menu_text}`} key={index}>
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </nav>
         </div>
         <div className={styles.center_icons}>
           <svg
@@ -85,11 +87,11 @@ const Header = () => {
         </div>
         <div className={styles.header_right}>
           <div className={styles.lang}>
-            <div className={`${styles.header_right_menu_item} ${styles.menu_text}`}>ru</div>
-            <div
+            <span className={`${styles.header_right_menu_item} ${styles.menu_text}`}>ru</span>
+            <span
               className={`${styles.header_right_menu_item} ${styles.menu_text} ${styles.no_active_lang}`}>
               eng
-            </div>
+            </span>
           </div>
           <div className={styles.login_tel_container}>
             <div className={styles.login_container}>
@@ -130,7 +132,7 @@ const Header = () => {
             </svg>
           </div>
         </div>
-      </div>
+      </header>
     </>
   );
 };

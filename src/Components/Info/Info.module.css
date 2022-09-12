@@ -1,98 +1,81 @@
-@font-face {
-    font-family: 'SangBleu Kingdom 700';
-	src: local('SangBleu Kingdom 700'),
-		url('../../Assets/Fonts/SangBleuKingdom/SangBleuKingdom-Bold-WebXL.woff')  format('woff'),
-        url('../../Assets/Fonts/SangBleuKingdom/SangBleuKingdom-Bold-WebXL.ttf')  format('ttf');
-}
-
-
-@font-face {
-    font-family: 'SangBleu Kingdom 400';
-	src: local('SangBleu Kingdom 400'),
-		url('../../Assets/Fonts/SangBleuKingdom/SangBleuKingdom-Regular-WebXL.woff')  format('woff'),
-        url('../../Assets/Fonts/SangBleuKingdom/SangBleuKingdom-Regular-WebXL.ttf')  format('ttf');
-}
-
-@font-face {
-    font-family: 'Euclid CircularB 500';
-	src: local('Euclid CircularB 500'),
-		url('../../Assets/Fonts/euclidcircularb/EuclidCircularB-Medium.woff2') format('woff2'), 
-		url('../../Assets/Fonts/euclidcircularb/EuclidCircularB-Medium.woff')  format('woff'),
-		url('../../Assets/Fonts/euclidcircularb/EuclidCircularB-Medium.ttf')  format('ttf'),
-		url('../../Assets/Fonts/euclidcircularb/EuclidCircularB-Medium.eot')  format('eot');
-}
-
 .container {
     position: relative;
-    margin-top: 96px;
+    margin-top: 90px;
     text-align: center;
     
 }
 
 .title {
-    margin-top: 78px;
+    margin-top: 74px;
     margin-bottom: 42px;
 }
 .title_top {
     font-family: 'SangBleu Kingdom 400';
     font-size: 40px;
     line-height: 56px;
-    color: #3D3C3C;
+    color: var(--color_dark_1);
 }
 
 .title_bottom {
     font-family: 'SangBleu Kingdom 700';
     font-size: 40px;
     line-height: 56px;
-    color: #3D3C3C;
+    color: var(--color_dark_1);
 }
 
 .description {
     font-family: 'SangBleu Kingdom 400';
     font-size: 18px;
     line-height: 32px;
-    color: #3D3C3C;
-    margin-top: 42px;
+    color: var(--color_dark_1);
+    margin-top: 38px;
 }
 
 .about{
     font-family: 'Euclid CircularB 500';
     width: 200px;
     height: 64px;
-    border: 1px solid #D9C287;
+    border: 1px solid var(--color_gold_1);
     border-radius: 8px;
     font-size: 14px;
     line-height: 24px;
     letter-spacing: 0.08em;
     text-transform: uppercase;
-    color: #3D3C3C;
+    color: var(--color_dark_1);
     margin-top: 38px;
 }
 
 
+.description_container {
+  width: 640px;
+  margin: 0 auto;
+}
 
 
 @media (max-width: 360px){
     .container {
-        padding-top: 72px;
+        padding-top: 67px;
         width: 328px;
         margin: 0 auto;
       }
 
+      .description_container {
+        width: 328px;
+      }
+
       .title {
-        margin-top: 63px;
-        margin-bottom: 25px;
+        margin-top: 60px;
+        margin-bottom: 24px;
       }
       .title_top, .title_bottom {   
         font-size: 24px;
         line-height: 32px;
       }
       .description {
-        margin-top: 26px;
-        font-weight: 400;
+        margin-top: 22px;
         font-size: 18px;
         line-height: 32px;
-        color: #333333;
+        color: var(--color_dark_3);
       }
       .logo {
         width: 37px;

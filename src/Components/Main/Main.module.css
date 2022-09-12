@@ -1,38 +1,3 @@
-@font-face {
-    font-family: 'Euclid CircularB 500';
-	src: local('Euclid CircularB 500'),
-		url('../../Assets/Fonts/euclidcircularb/EuclidCircularB-Medium.woff2') format('woff2'), 
-		url('../../Assets/Fonts/euclidcircularb/EuclidCircularB-Medium.woff')  format('woff'),
-		url('../../Assets/Fonts/euclidcircularb/EuclidCircularB-Medium.ttf')  format('ttf'),
-		url('../../Assets/Fonts/euclidcircularb/EuclidCircularB-Medium.eot')  format('eot');
-}
-
-@font-face {
-    font-family: 'Euclid Circular B 300';
-	src: local('Euclid Circular B 300'),
-		url('../../Assets/Fonts/euclidcircularb/EuclidCircularB-Light.woff2') format('woff2'), 
-		url('../../Assets/Fonts/euclidcircularb/EuclidCircularB-Light.woff')  format('woff'),
-		url('../../Assets/Fonts/euclidcircularb/EuclidCircularB-Light.ttf')  format('ttf'),
-		url('../../Assets/Fonts/euclidcircularb/EuclidCircularB-Light.eot')  format('eot');
-}
-
-@font-face {
-    font-family: 'Euclid Circular B 400';
-	src: local('Euclid Circular B 400'),
-		url('../../Assets/Fonts/euclidcircularb/EuclidCircularB-Regular.woff2') format('woff2'), 
-		url('../../Assets/Fonts/euclidcircularb/EuclidCircularB-Regular.woff')  format('woff'),
-		url('../../Assets/Fonts/euclidcircularb/EuclidCircularB-Regular.ttf')  format('ttf'),
-		url('../../Assets/Fonts/euclidcircularb/EuclidCircularB-Regular.eot')  format('eot');
-}
-
-
-@font-face {
-    font-family: 'SangBleu Kingdom 400';
-	src: local('SangBleu Kingdom 400'),
-		url('../../Assets/Fonts/SangBleuKingdom/SangBleuKingdom-Regular-WebXL.woff')  format('woff'),
-        url('../../Assets/Fonts/SangBleuKingdom/SangBleuKingdom-Regular-WebXL.ttf')  format('ttf');
-}
-
 .main {
     background-color: transparent;
 }
@@ -64,27 +29,27 @@
 }
 
 .mriya {
-    left: -35px;
+    left: 0px;
     top: 3134px;
     z-index: -2;
 }
 
 .bottom_logo {
     position: absolute;
-    top: 3633px;
+    top: 3661px;
     left: 50%;
     transform: translate(-50%,-50%);
 }
 
 .line {
     left: 718.99px;
-    top: 611.7px;
+    top: 611px;
 
 }
 
 .flower_petral {
     left: 806.7px;
-    top: 611.73px;
+    top: 610.73px;
 }
 
 .waves {
@@ -94,11 +59,19 @@
 
 .flower_360, .flower_stroke_360, .hotel_360, .clouds_360 {
     display: none;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: -1;
+}
+
+.flower_360 {
+    top: 14px;
 }
 
 .info_container {
     margin-left: 135px;
-    margin-top: 23px;
+    margin-top: 19px;
     display: flex;
 }
 
@@ -108,7 +81,7 @@
 }
 
 .weather {
-    width: 185px;
+    width: 187px;
 }
 
 .socials {
@@ -121,7 +94,7 @@
     width: 64px;
     height: 64px;
     border-radius: 50%;
-    border: 1px solid #D9C287;
+    border: 1px solid var(--color_gold_1);
     margin-left: 61px;
 }
 
@@ -137,14 +110,18 @@
     width: 48px;
     height: 48px;
     border-radius: 50%;
-    background-color: #FFFFFF;
+    background-color: var(--color_white_1);
 }
 
-.social_button svg {
+.facebook, .twitter, .instagram {
     position: absolute;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
+}
+
+.facebook {
+    left: 53%;
 }
 
 
@@ -154,7 +131,8 @@
     line-height: 24px;
     letter-spacing: 0.08em;
     text-transform: uppercase;
-    color: #3D3C3C;
+    color: var(--color_dark_1);
+    margin-left: 4px;
 }
 
 .name_container {
@@ -163,29 +141,31 @@
 
 .name {
     font-family: 'SangBleu Kingdom 400';
-    color: #3D3C3C;
+    color: var(--color_dark_1);
     font-size: 96px;
     line-height: 96px;
 }
 
 .description {
     margin-top: 41px;
+    margin-left: 5px;
     font-family: 'Euclid Circular B 300';
     font-size: 24px;
     line-height: 32px;
-    color: #3D3C3C;
+    color: var(--color_dark_1);
 }
 
 .degree {
     font-family: 'Euclid Circular B 400';
     font-size: 48px;
     line-height: 56px;
-    color: #FFFFFF;
+    color: var(--color_white_1);
 }
 
 
 .buttons_container {
     margin-top: 57px;
+    margin-left: 5px;
 }
 
 .find_room, .explore {
@@ -198,34 +178,35 @@
     font-family: 'Euclid CircularB 500';
     letter-spacing: 0.08em;
     text-transform: uppercase;
-    color: #3D3C3C;
+    color: var(--color_dark_1);
 
 }
 
 .find_room {
-    background: linear-gradient(0deg, #BCA56A, #BCA56A), #86C1DB;  
-    color: #FFFFFF;
+    background: linear-gradient(0deg, var(--color_gold_2), var(--color_gold_2)), #86C1DB;  
+    color: var(--color_white_1);
 }
 .explore {
-    border: 1px solid #D9C287;
-    color: #3D3C3C;
+    border: 1px solid var(--color_gold_1);
+    color: var(--color_dark_1);
     margin-left: 40px;
 }
 
 .vector {
-    margin-left: 31px;
+    margin-left: 37px;
     margin-top: 24px;
-    border-left: 1px solid #D9C287;
+    border-left: 1px solid var(--color_gold_1);
     height: 48px;
 }
 
 .round {
     position: relative;
     margin-top: 24px;
+    margin-left: 5px;
     width: 64px;
     height: 64px;
     border-radius: 50%;
-    border: 1px solid #D9C287;;
+    border: 1px solid var(--color_gold_1);;
 }
 
 .round svg {
@@ -236,7 +217,8 @@
 }
 
 .weather_container {
-    margin-top: 547px;
+    margin-top: 548px;
+    margin-left: 5px;
 
 }
 
@@ -244,18 +226,20 @@
     font-family: 'Euclid Circular B 300';
     font-size: 20px;
     line-height: 32px;
-    color: #FFFFFF;
+    color: var(--color_white_1);
     margin-left: 83px;
+    margin-top: -2px;
 }
 
 .location {
     font-family: 'Euclid Circular B 300';
     font-size: 16px;
     line-height: 24px;
-    color: #FFFFFF;
-    margin-left: 50px;
+    color: var(--color_white_1);
+    margin-left: 47px;
     display: flex;
     align-items: center;
+    margin-top: 5px;
 }
 
 .town {
@@ -271,7 +255,7 @@
         width: 328px;
         margin: 0 auto;
         display: block;
-        margin-top: 23px;
+        margin-top: 19px;
     }
 
     .main_info {
@@ -283,10 +267,6 @@
     }
     .flower_360, .flower_stroke_360,.hotel_360, .clouds_360  {
         display: block;
-        position: absolute;
-        right: 0;
-        top: 0;
-        z-index: -1;
     }
     .waves {
         margin-left: -20.83%;;
@@ -302,6 +282,7 @@
         margin-top: 28px;
         font-size: 20px;
         line-height: 32px;
+        margin-left: -0.2px;
     }
     .find_room, .explore {
         width: 156px;
@@ -314,6 +295,7 @@
 
     .buttons_container {
         margin-top: 39px;
+        margin-left: -0.5px;
     }  
 
     .round {
@@ -329,6 +311,10 @@
         top: 2148px;
     }
     .bottom_logo  {
-        top: 3744px;
+        top: 3772px;
     } 
+
+    .title {
+        margin-left: -1px;
+    }
 }

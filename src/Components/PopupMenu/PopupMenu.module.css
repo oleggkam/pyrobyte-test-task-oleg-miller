@@ -1,37 +1,3 @@
-@font-face {
-    font-family: 'Euclid CircularB 500';
-	src: local('Euclid CircularB 500'),
-		url('../../Assets/Fonts/euclidcircularb/EuclidCircularB-Medium.woff2') format('woff2'), 
-		url('../../Assets/Fonts/euclidcircularb/EuclidCircularB-Medium.woff')  format('woff'),
-		url('../../Assets/Fonts/euclidcircularb/EuclidCircularB-Medium.ttf')  format('ttf'),
-		url('../../Assets/Fonts/euclidcircularb/EuclidCircularB-Medium.eot')  format('eot');
-}
-
-@font-face {
-    font-family: 'Euclid Circular B 400';
-	src: local('Euclid Circular B 400'),
-		url('../../Assets/Fonts/euclidcircularb/EuclidCircularB-Regular.woff2') format('woff2'), 
-		url('../../Assets/Fonts/euclidcircularb/EuclidCircularB-Regular.woff')  format('woff'),
-		url('../../Assets/Fonts/euclidcircularb/EuclidCircularB-Regular.ttf')  format('ttf'),
-		url('../../Assets/Fonts/euclidcircularb/EuclidCircularB-Regular.eot')  format('eot');
-}
-
-@font-face {
-    font-family: 'Euclid Circular B 300';
-	src: local('Euclid Circular B 300'),
-		url('../../Assets/Fonts/euclidcircularb/EuclidCircularB-Light.woff2') format('woff2'), 
-		url('../../Assets/Fonts/euclidcircularb/EuclidCircularB-Light.woff')  format('woff'),
-		url('../../Assets/Fonts/euclidcircularb/EuclidCircularB-Light.ttf')  format('ttf'),
-		url('../../Assets/Fonts/euclidcircularb/EuclidCircularB-Light.eot')  format('eot');
-}
-
-@font-face {
-    font-family: 'SangBleu Kingdom 700';
-	src: local('SangBleu Kingdom 700'),
-		url('../../Assets/Fonts/SangBleuKingdom/SangBleuKingdom-Bold-WebXL.woff')  format('woff'),
-        url('../../Assets/Fonts/SangBleuKingdom/SangBleuKingdom-Bold-WebXL.ttf')  format('ttf');
-}
-
 .wrapper {
     position: absolute;
     top: 0;
@@ -54,13 +20,13 @@
     border-bottom: 1px solid rgba(196, 196, 196, 0.08);
     display: flex;
     justify-content: space-between;
-    background-color:  #242424;
+    background-color:  var(--color_dark_2);
     opacity: 0.98;
 }
 
 .logo {
     position: absolute;
-    top: 50%;
+    top: 45%;
     left: 83px;
     transform: translate(-50%,-50%);
 }
@@ -75,10 +41,28 @@
     line-height: 24px;
     letter-spacing: 0.08em;
     text-transform: uppercase;
-    color: #FFFFFF;
+    color: var(--color_white_1);
+}
+
+.horizontal ul {
+    display: flex;
+    margin-top: 6px;
 }
 
 .horizontal_item:not(:first-child)  {
+    margin-left: 64px;
+}
+
+.horizontal_item:nth-child(2) {
+    margin-left: 65px;
+}
+
+.horizontal_item:nth-child(3) {
+    margin-left: 65px;
+}
+
+
+.horizontal_item:last-child  {
     margin-left: 64px;
 }
 
@@ -86,7 +70,7 @@
     position: relative;
     width: 80px;
     height: 80px;
-    background: #3D3C3C;
+    background: var(--color_dark_1);
 }
 
 .close svg {
@@ -100,11 +84,13 @@
     flex-basis: 26%;
     display: flex;
     align-items: center;
-    margin-left: 100px;
+    margin-left: 211px;
+    margin-top: 8px;
 }
 
 .key {
     position: relative;
+    top: -1px;
 }
 
 .enter {
@@ -113,14 +99,14 @@
     line-height: 24px;
     letter-spacing: 0.08em;
     text-transform: uppercase;
-    color: #FFFFFF;
-    border-bottom: 2px dashed #FFFFFF;
+    color: var(--color_white_1);
+    border-bottom: 2px dashed var(--color_white_1);
     margin-left: 8px;
 }
 
 .vertical {
     width: 1360px;
-    background-color: #242424;
+    background-color: var(--color_dark_2);
     opacity: 0.98;
 }
 
@@ -140,13 +126,15 @@
 .vertical_container {
     display: flex;
     width: 100%;
-    border-bottom: 1px solid rgba(217, 194, 135, 0.24);
 }
 
 .menu_container {
-    width: 813px;
-    margin-top: 39px;
+    width: 800px;
+    height: 594px;
+    margin-top: 23px;
+    margin-left: 56px;
     display: flex;
+    border-bottom: 1px solid rgba(217, 194, 135, 0.24);
 }
 
 .vertical_window {
@@ -158,12 +146,12 @@
 
 .vector {
     position: relative;
-    width: 15px;
+    width: 16px;
 }
 
 .vector svg {
     position: absolute;
-    top:0;
+    top: 9px;
     right: 0;
 }
 
@@ -180,12 +168,14 @@
     font-family: 'Euclid Circular B 300';
     font-size: 24px;
     line-height: 32px;
-    color: #FFFFFF;
+    color: var(--color_white_1);
+    text-shadow: 0px 1px 1px var(--color_text_shadow);
     margin-left: 24px; 
 }
 
 .vertical_item:hover {
     cursor: pointer;
+    text-shadow: none;
     background-color: rgba(217, 194, 135, 0.16);
 }
 
@@ -207,7 +197,7 @@
 .slide {
     position: relative;
     width: 100%;
-    background-image:url('../../Assets/Img/slide.png')
+    background-image:url('../../Assets/Img/slide.png');
 }
 
 .angle {
@@ -219,15 +209,15 @@
 .more {
     width: 200px;
     height: 64px;
-    border-radius: 5px;
-    background-color:  #BCA56A;
+    border-radius: 8px;
+    background-color:  var(--color_gold_2);
     font-family: 'Euclid CircularB 500';
     font-size: 14px;
     line-height: 24px;
     text-align: center;
     letter-spacing: 0.08em;
     text-transform: uppercase;
-    color: #FFFFFF;  
+    color: var(--color_white_1);  
     margin-top: 25px;
 }
 
@@ -235,16 +225,17 @@
     font-family: 'SangBleu Kingdom 700';
     font-size: 40px;
     line-height: 56px;
-    color: #FFFFFF;
-    text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.32);
+    color: var(--color_white_1);
+    text-shadow: 0px 1px 1px var(--color_text_shadow);
 }
 
 .slider_text {
     font-family: 'Euclid Circular B 300';
     font-size: 24px;
     line-height: 32px;
-    color: #FFFFFF;
-    text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.32);
+    color: var(--color_white_1);
+    text-shadow: 0px 1px 1px var(--color_text_shadow);
+    margin-top: 1px;
 }
 
 .slider_info {
@@ -253,21 +244,18 @@
     margin-top: 398px;
 }
 
-.bottom {
-
-}
-
 .info {
-    height: 71px;
+    height: 75px;
     display: flex;
     justify-content: flex-end;
     margin-right: 60px;
+    margin-top: -4px;
     font-family: 'Euclid CircularB 500';
     font-size: 14px;
     line-height: 24px;
     letter-spacing: 0.08em;
     text-transform: uppercase;
-    color: #FFFFFF;
+    color: var(--color_white_1);
     opacity: 0.64;
 }
 
@@ -288,14 +276,14 @@
     text-align: center;
     letter-spacing: 0.08em;
     text-transform: uppercase;
-    color: #FFFFFF;
+    color: var(--color_white_1);
 }
 
 .mobile_border {
     width: 328px;
     height: 1px;
     margin: 0 auto;
-    background-color: rgba(217, 194, 135, 0.08);;
+    background-color: rgba(217, 194, 135, 0.08);
 }
 
 .arrow {
@@ -311,19 +299,19 @@
     line-height: 24px;
     letter-spacing: 0.08em;
     text-transform: uppercase;
-    color: #FFFFFF;
+    color: var(--color_white_1);
 }
 
 .find {
     width: 328px;
     height: 64px;
-    border-radius: 5px;
-    background-color: #BCA56A;
+    border-radius: 8px;
+    background-color: var(--color_gold_2);
     margin-top: 39px;
 }
 
 .about {
-    margin-top: 44px;
+    margin-top: 41px;
 }
 
 .about_line:not(:first-child){
@@ -334,10 +322,15 @@
     margin-left: 32px;
 }
 
+.about_line:last-child {
+    margin-top: 16px;
+    margin-left: -7px;
+}
+
 .socials {
     display: flex;
     justify-content: center;
-    margin-top: 22px;
+    margin-top: 25px;
 }
 
 .social {
@@ -345,7 +338,7 @@
     width: 48px;
     height: 48px;
     border-radius: 50%;
-    border: 1px solid #D9C287;
+    border: 1px solid var(--color_gold_1);
 }
 
 .social:not(:first-child){
@@ -360,7 +353,8 @@
 }
 
 .telephon {
-    margin-top: 34px;
+    margin-top: 31px;
+    margin-left: 2px;
 }
 
 .close_container {
@@ -380,6 +374,7 @@
 
     .menu_container {
         margin: 0;
+        height: 641px;
     }
 
     .vertical_window {
@@ -388,7 +383,7 @@
     
     .vertical_item {
         width: 100%;
-        height: 56px;
+        height: 55px;
     }
     .logo {
         left: 50%;
@@ -398,7 +393,7 @@
         border-bottom: 1px solid rgba(196, 196, 196, 0.08);
     }
     .header {
-        background-color:#3D3C3C;    
+        background-color:var(--color_dark_1);    
         opacity: 1;    
     }
     .vertical {
@@ -418,6 +413,7 @@
         align-items: center;
         font-size: 20px;
         line-height: 32px;
+        margin-left: 16px;
     }
 
     .text svg {
@@ -432,5 +428,9 @@
 
     .bottom {
         display: block;
+    }
+
+    .mail {
+      margin: 0;
     }
 }

@@ -1,7 +1,8 @@
 .container {
     position: relative;
     width: 420px;
-    height: 616px;
+    height: 617px;
+    border-bottom: 1px solid rgba(217, 194, 135, 0.24);
 }
 
 .window {
@@ -29,7 +30,7 @@
     width: 16px;
     height: 16px;
     border-radius: 50%;
-    background: #FFFFFF;
+    background: var(--color_white_1);
 }
 
 .button svg {
@@ -44,5 +45,5 @@
 }
 
 .active {
-    background-color: #D9C287;
+    background-color: var(--color_gold_1);
 }

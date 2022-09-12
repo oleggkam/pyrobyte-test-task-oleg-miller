@@ -3,7 +3,7 @@ import styles from './Main.module.css';
 
 const Main = () => {
   return (
-    <div className={styles.main}>
+    <section className={styles.main}>
       <svg
         className={styles.flower}
         xmlns="http://www.w3.org/2000/svg"
@@ -107,13 +107,15 @@ const Main = () => {
         <div className={styles.main_info}>
           <span className={styles.title}>Family & Health Club</span>
           <div className={styles.name_container}>
-            <div className={styles.name}>Mriya</div>
-            <div className={styles.name}>Resort</div>
+            <h1>
+              <div className={styles.name}>Mriya</div>
+              <div className={styles.name}>Resort</div>
+            </h1>
           </div>
-          <div className={styles.description}>
+          <p className={styles.description}>
             Российский курорт для всей семьи
             <br className={styles.br} /> на берегу черного моря
-          </div>
+          </p>
           <div className={styles.buttons_container}>
             <button className={styles.find_room}>Найти номер</button>
             <button className={styles.explore}>3D тур</button>
@@ -181,6 +183,7 @@ const Main = () => {
           <div className={styles.social}>
             <div className={styles.social_button}>
               <svg
+                className={styles.facebook}
                 xmlns="http://www.w3.org/2000/svg"
                 width="12"
                 height="18"
@@ -200,6 +203,7 @@ const Main = () => {
           <div className={styles.social}>
             <div className={styles.social_button}>
               <svg
+                className={styles.twitter}
                 xmlns="http://www.w3.org/2000/svg"
                 width="18"
                 height="15"
@@ -215,6 +219,7 @@ const Main = () => {
           <div className={styles.social}>
             <div className={styles.social_button}>
               <svg
+                className={styles.instagram}
                 xmlns="http://www.w3.org/2000/svg"
                 width="18"
                 height="18"
@@ -239,7 +244,7 @@ const Main = () => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

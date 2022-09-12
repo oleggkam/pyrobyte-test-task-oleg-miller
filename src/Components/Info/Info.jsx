@@ -3,7 +3,7 @@ import styles from './Info.module.css';
 
 const Info = () => {
   return (
-    <div className={styles.container}>
+    <section className={styles.container}>
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width="146"
@@ -16,8 +16,10 @@ const Info = () => {
         />
       </svg>
       <div className={styles.title}>
-        <div className={styles.title_top}>Mriya Resort & SPA —</div>
-        <div className={styles.title_bottom}>больше чем просто отдых</div>
+        <h2>
+          <div className={styles.title_top}>Mriya Resort & SPA —</div>
+          <div className={styles.title_bottom}>больше чем просто отдых</div>
+        </h2>
       </div>
       <svg
         className={styles.logo}
@@ -32,12 +34,13 @@ const Info = () => {
         />
       </svg>
       <div className={styles.description}>
-        В окружении необычного природного ландшафта курорт
-        <br /> становится по-настоящему уникальным. Это место идеально для
-        <br /> тех, кто больше гор любит только море.
+        <p className={styles.description_container}>
+          В окружении необычного природного ландшафта курорт становится по-настоящему уникальным.
+          Это место идеально для тех, кто больше гор любит только море.
+        </p>
       </div>
       <button className={styles.about}>О комплексе</button>
-    </div>
+    </section>
   );
 };
 

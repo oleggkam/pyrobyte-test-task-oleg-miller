@@ -27,7 +27,7 @@ const AllInclusiveSlider = ({ children, currentWidth }) => {
   return (
     <div className={styles.container}>
       <div className={styles.switch}>
-        <div className={styles.allinclusive}>Все включено</div>
+        <h2 className={styles.allinclusive}>Все включено</h2>
         <div className={styles.arrows}>
           <button className={styles.previous} onClick={handleLeftClick}>
             <svg

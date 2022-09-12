@@ -38,7 +38,7 @@ const Categories = () => {
     },
   ];
   return (
-    <div className={styles.container}>
+    <section className={styles.container}>
       <div className={styles.categories_container}>
         <div className={styles.tabs}>
           {tabNames.map((item, index) => (
@@ -48,7 +48,7 @@ const Categories = () => {
               onClick={() => {
                 setActiveCategory(index);
               }}>
-              {item}
+              <div className={styles.text}>{item}</div>
             </div>
           ))}
         </div>
@@ -99,7 +99,7 @@ const Categories = () => {
             return <TabItem key={index} img={item.img} category={item.category} text={item.text} />;
           })}
       </div>
-    </div>
+    </section>
   );
 };
 
