@@ -93,15 +93,22 @@
     top: -1px;
 }
 
-.enter {
+.login {
+    position: relative;
     font-family: 'Euclid CircularB 500';
     font-size: 14px;
     line-height: 24px;
     letter-spacing: 0.08em;
     text-transform: uppercase;
     color: var(--color_white_1);
-    border-bottom: 2px dashed var(--color_white_1);
     margin-left: 8px;
+    margin-top: -1px;
+}
+
+.login svg {
+    position: absolute;
+    right: 1px;
+    bottom: 3px;
 }
 
 .vertical {
@@ -290,6 +297,11 @@
     position: absolute;
     left: 322px;
     top: 24px;
+}
+
+.arrow_right {
+    margin-top: 5px;
+    transform: rotate(270deg);
 }
 
 .mobile_bottom {

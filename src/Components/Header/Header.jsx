@@ -112,6 +112,23 @@ const Header = () => {
               <span className={`${styles.login} ${styles.menu_text}`} href="#">
                 Вход
               </span>
+              <svg
+                className={styles.login_line}
+                xmlns="http://www.w3.org/2000/svg"
+                width="44"
+                height="1"
+                viewBox="0 0 44 1"
+                fill="none">
+                <rect
+                  x="0.25"
+                  y="0.25"
+                  width="43.5"
+                  height="0.5"
+                  stroke="white"
+                  stroke-width="0.5"
+                  stroke-dasharray="3 4"
+                />
+              </svg>
             </div>
             <span className={`${styles.telephon} ${styles.menu_text}`}>8 800 500 6847</span>
             <div></div>

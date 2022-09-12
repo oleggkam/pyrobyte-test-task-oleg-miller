@@ -122,7 +122,16 @@
 .login {
     margin-left: 8px;
     color:  var(--color_white_1); 
-    border-bottom: 1px dashed var(--color_white_1) ;
+}
+
+.login_container {
+    position: relative;
+}
+
+.login_line {
+    position: absolute;
+    right: 0;
+    bottom: 3px;
 }
 
 .key_360 {

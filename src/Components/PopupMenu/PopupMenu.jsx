@@ -131,7 +131,25 @@ const PopupMenu = ({ popupMenuToogle }) => {
                 />
               </svg>
             </div>
-            <div className={styles.enter}>Вход</div>
+            <div className={styles.login}>
+              Вход
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="44"
+                height="1"
+                viewBox="0 0 44 1"
+                fill="none">
+                <rect
+                  x="0.25"
+                  y="0.25"
+                  width="43.5"
+                  height="0.5"
+                  stroke="white"
+                  stroke-width="0.5"
+                  stroke-dasharray="3 4"
+                />
+              </svg>
+            </div>
           </div>
           <div className={styles.close_container}>
             <button
@@ -186,9 +204,12 @@ const PopupMenu = ({ popupMenuToogle }) => {
                               setActiveSubMenu(item.SubMenuItemId);
                             }}>
                             <span className={styles.text}>{item.name}</span>
-                            {activeSubMenu === index && isMobileMode && (
+                            {activeSubMenu === index && (
                               <svg
-                                className={styles.arrow}
+                                className={
+                                  `${styles.arrow}` +
+                                  ` ${!isMobileMode ? `${styles.arrow_right}` : ''}`
+                                }
                                 xmlns="http://www.w3.org/2000/svg"
                                 width="12"
                                 height="8"
